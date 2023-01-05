@@ -9,9 +9,23 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+
+        <!-- java -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
+        <!-- encoding -->
+        <encoding.type>UTF-8</encoding.type>
+        <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
+        <file.encoding>${encoding.type}</file.encoding>
+
+        <!-- dependencies version -->
         <junit-jupiter.version>5.8.2</junit-jupiter.version>
         <junit-platform-runner.version>1.8.2</junit-platform-runner.version>
         <selenium-java.version>4.4.0</selenium-java.version>
+        <webdrivermanager.version>5.3.1</webdrivermanager.version>
+
     </properties>
 
     <dependencies>
@@ -36,6 +50,12 @@
             <version>${selenium-java.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
 
     </dependencies>
     
