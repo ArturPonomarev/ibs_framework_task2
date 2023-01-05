@@ -1,0 +1,4 @@
+{
+  "pageLoadTimeout": 30,
+  "elementWaitingTimeoutImplicit": 10
+}
