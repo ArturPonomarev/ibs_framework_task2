@@ -1,4 +1,4 @@
-package ibs.framework.utils;
+package rgs.framework.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
