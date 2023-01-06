@@ -1,3 +1,8 @@
 {
-  "baseUrl": "https://www.rgs.ru"
+  "baseUrl": "https://www.rgs.ru",
+  "users": [
+    {"username": "user1", "phoneNumber": "1234567890", "email": "qwertyqwerty","address": "г Москва"},
+    {"username": "user2", "phoneNumber": "2345678901", "email": "qwertyqwerty","address": "г Москва"},
+    {"username": "user3", "phoneNumber": "3456789012", "email": "qwertyqwerty","address": "г Москва"}
+  ]
 }
