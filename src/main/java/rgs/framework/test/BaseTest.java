@@ -1,22 +1,22 @@
 package rgs.framework.test;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import rgs.framework.driver.DriverProvider;
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
 public abstract class BaseTest {
 
     protected WebDriver driver = DriverProvider.getInstance().getDriver();
 
-    @Before
-    public void setUp(){
+    @BeforeEach
+    public void setUp() {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
 
-    @After
-    public void tearDown(){
+    @AfterEach
+    public void tearDown() {
         DriverProvider.getInstance().quitDriver();
     }
 }

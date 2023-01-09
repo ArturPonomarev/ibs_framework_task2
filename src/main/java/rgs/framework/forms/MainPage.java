@@ -9,8 +9,8 @@ import rgs.framework.utils.ElementUtils;
 public class MainPage extends BaseForm {
 
     private final String subscribeFrameId = "fl-616371"; //Айди не автогенерируется
+    private final String insuranceTargetButtonPath = "//*[@href][contains(text(),'%s')]";
     private final By subscribeFrame = By.id(subscribeFrameId);
-    private final By forCompainesButton = By.xpath("//*[@href = '/for-companies']");
     private final By closeSubscribeFrameButton = By.xpath("//*[@data-fl-track = 'click-close-login']");
 
     private static final By UniqueElementLocator = By.xpath("//*[@href = '/aktivatsiya']");
@@ -19,8 +19,9 @@ public class MainPage extends BaseForm {
         super(UniqueElementLocator);
     }
 
-    public void ClickCompaniesButton() {
-        new Button(forCompainesButton).click();
+
+    public void ClickInsuranceTargetButton (String buttonName) {
+        new Button(By.xpath(String.format(insuranceTargetButtonPath,buttonName))).click();
     }
 
     public boolean IsSubscribeFrameExist() {
