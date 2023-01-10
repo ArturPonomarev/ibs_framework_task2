@@ -7,7 +7,6 @@ import rgs.framework.forms.CompaniesPage;
 import rgs.framework.forms.HealthInsurancePage;
 import rgs.framework.forms.MainPage;
 import rgs.framework.models.UserData;
-import rgs.framework.test.BaseTest;
 import rgs.framework.utils.JsonDataProvider;
 import rgs.framework.utils.TestDataUtils;
 

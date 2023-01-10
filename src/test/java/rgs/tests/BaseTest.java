@@ -1,4 +1,4 @@
-package rgs.framework.test;
+package rgs.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
