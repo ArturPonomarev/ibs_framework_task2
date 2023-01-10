@@ -95,7 +95,11 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <failIfNoTests>false</failIfNoTests>
+                    <systemPropertyVariables>
+                        <browserName>Chrome</browserName>
+                    </systemPropertyVariables>
                 </configuration>
+
             </plugin>
 
         </plugins>

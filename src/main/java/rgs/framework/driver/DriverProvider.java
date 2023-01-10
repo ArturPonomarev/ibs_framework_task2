@@ -1,9 +1,7 @@
 package rgs.framework.driver;
 
 import rgs.framework.utils.JsonDataProvider;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
@@ -22,10 +20,8 @@ public class DriverProvider {
     }
 
     public WebDriver getDriver() {
-        //TODO: вынести в фабрику через переменную
         if (driver == null) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = DriverFactory.createDriver();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(JsonDataProvider.configData.pageLoadTimeout));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(JsonDataProvider.configData.elementWaitingTimeoutImplicit));
         }

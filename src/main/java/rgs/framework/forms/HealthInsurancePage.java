@@ -1,4 +1,5 @@
 package rgs.framework.forms;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import rgs.framework.elements.Button;
@@ -45,8 +46,6 @@ public class HealthInsurancePage extends BaseForm {
         new TextBox(userAddressFieldTextBox).sendKeys(data.address, false);
     }
 
-
-    //TODO: Метод не актуален, сделать проверку каждого поля через assert.that
     public UserData getInputedUserData() {
         UserData data = new UserData();
         data.username = new TextBox(userNameFieldTextBox).getValue();
@@ -58,7 +57,7 @@ public class HealthInsurancePage extends BaseForm {
 
     public void clickAcceptRulesCheckbox() {
         //Через .click() не кликается
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", new TextBox(acceptRulesCheckBox).getElement());
     }
 
@@ -68,7 +67,7 @@ public class HealthInsurancePage extends BaseForm {
 
     public void clickCallMeButton() {
         //Через .click() не кликается
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", new Button(callMeButton).getElement());
     }
 

@@ -20,8 +20,8 @@ public class MainPage extends BaseForm {
     }
 
 
-    public void ClickInsuranceTargetButton (String buttonName) {
-        new Button(By.xpath(String.format(insuranceTargetButtonPath,buttonName))).click();
+    public void ClickInsuranceTargetButton(String buttonName) {
+        new Button(By.xpath(String.format(insuranceTargetButtonPath, buttonName))).click();
     }
 
     public boolean IsSubscribeFrameExist() {

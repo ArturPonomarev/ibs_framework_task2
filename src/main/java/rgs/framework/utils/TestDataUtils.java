@@ -2,8 +2,7 @@ package rgs.framework.utils;
 
 public class TestDataUtils {
 
-    public static String TransformPhoneNumberToCorrect(String rawNumber)
-    {
+    public static String TransformPhoneNumberToCorrect(String rawNumber) {
         char[] number = rawNumber.toCharArray();
 
         String newNumber = "+7 (";
